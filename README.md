@@ -60,7 +60,7 @@ The current specification is a proposal. Feedback is requested.
 
 ## Rule Creation
 
-Florian wrote a short [rule creation tutorial](https://www.nextron-systems.com/2018/02/10/write-sigma-rules/) that can help you getting started.
+Florian wrote a short [rule creation tutorial](https://www.nextron-systems.com/2018/02/10/write-sigma-rules/) that can help you getting started. Use the [Rule Creation Guide](https://github.com/SigmaHQ/sigma/wiki/Rule-Creation-Guide) in our Wiki for a clear guidance on how to populate the various field in Sigma rules.
 
 ## Rule Usage
 
@@ -101,6 +101,8 @@ Windows 'Security' Eventlog: Suspicious Number of Failed Logons from a Single So
 Sigmac converts sigma rules into queries or inputs of the supported targets listed below. It acts as a frontend to the
 Sigma library that may be used to integrate Sigma support in other projects. Further, there's `merge_sigma.py` which
 merges multiple YAML documents of a Sigma rule collection into simple Sigma rules.
+
+**WARNING: Do not provide conversion backends for this tool anymore. We'll soon set a date for its deprecation. Since October 2020, we're working on a much more flexible and stable module named [pySigma](https://github.com/SigmaHQ/pySigma) and a command line interface named [sigma-cli](https://github.com/SigmaHQ/sigma-cli) that makes use of pySigma.**
 
 ### Usage
 
@@ -352,11 +354,11 @@ The github issue tracker is a good place to start tackling some issues others ra
 
 ## Provide Backends / Backend Features / Bugfixes
 
-Please don't provide backends for the old code base anymore. We recommand using the new [pySigma](https://github.com/SigmaHQ/pySigma). We are working on a documentation on how to write new backends for that new code base.
+Please don't provide backends for the old code base (sigmac) anymore. Please use the new [pySigma](https://github.com/SigmaHQ/pySigma). We are working on a documentation on how to write new backends for that new code base. An example backend for Splunk can be found [here](https://github.com/SigmaHQ/pySigma-backend-splunk).
 
 ## Spread the word
 
-Last but not least, the more people use Sigma, the better, so help promote it by sharing it via social media. If you are using it, consider giving a talk about your journey and tell us about it.
+Last but not least, the more people use Sigma, the better, so help promote it by sharing it via social media. If you are using it, consider giving a talk about your journey and tell us about it. 
 
 # Licenses
 

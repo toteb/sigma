@@ -10,7 +10,6 @@ references:
 tags:
     - attack.persistence
     - attack.t1547
-    - attack.t1547.006
 logsource:
     category: process_creation
     product: windows
@@ -22,8 +21,7 @@ detection:
             - '-a'
             - '/add-driver'
             - '.inf'
-        Image|endswith:
-            - '\pnputil.exe'
+        Image|endswith: '\pnputil.exe'
     condition: selection
 fields:
     - ComputerName
